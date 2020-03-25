@@ -158,6 +158,33 @@
         document.getElementById("url").onchange = function() {validar()};
         document.getElementById("contador").onchange = function() {validar()};
         document.getElementById("section").onchange = function() {validar()};
+
+function contarcaracteres(){
+//Numero de caracteres permitidos
+    var total=200;
+
+     setTimeout(function(){
+     var valor=document.getElementById('contador');
+     var respuesta=document.getElementById('res');
+     var cantidad=valor.value.length;
+     document.getElementById('res').innerHTML = cantidad + ' caracteres, te quedan ' + (total - cantidad) ;
+     if(cantidad>total){
+         respuesta.style.color = "red";
+     }
+     else {
+         respuesta.style.color = "gray";
+     }
+     },10);
+
+ }
+
+function reset() {
+    document.getElementById("form").reset();
+    document.getElementById("toPost").value = "";
+    contarcaracteres()
+}
+
+    
 </script>
 <!-- fin scripts propios -->    
 </body>

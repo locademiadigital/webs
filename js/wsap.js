@@ -1,13 +1,4 @@
-document.getElementById("nombre").onchange = function() {validar()};
-document.getElementById("titulo").onchange = function() {validar()};
-document.getElementById("url").onchange = function() {validar()};
-document.getElementById("contador").onchange = function() {validar()};
-document.getElementById("section").onchange = function() {validar()};
-    
-    
-    
 function validar() {
-    
     var nom = document.getElementById('nombre');
     var tit = document.getElementById('titulo');
     var url1 = document.getElementById('url');
@@ -48,7 +39,6 @@ function validar() {
       //
 }    
 
-
 function ok() {
     var name = document.getElementById('nombre').value;
     var ok_titulo = document.getElementById('titulo').value;
@@ -63,30 +53,3 @@ function ok() {
     var mensaje = "https://wa.me/543512600009?text=" + encodeURIComponent(waStr);
     window.open(mensaje);
 }
-
-function contarcaracteres(){
-//Numero de caracteres permitidos
-    var total=200;
-
-     setTimeout(function(){
-     var valor=document.getElementById('contador');
-     var respuesta=document.getElementById('res');
-     var cantidad=valor.value.length;
-     document.getElementById('res').innerHTML = cantidad + ' caracteres, te quedan ' + (total - cantidad) ;
-     if(cantidad>total){
-         respuesta.style.color = "red";
-     }
-     else {
-         respuesta.style.color = "gray";
-     }
-     },10);
-
- }
-
-function reset() {
-    document.getElementById("form").reset();
-    document.getElementById("toPost").value = "";
-    contarcaracteres()
-}
-
-    </script>

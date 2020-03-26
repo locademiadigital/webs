@@ -20,6 +20,16 @@
         background-color: #87e454bf
         }
     </style>
+<script src="https://www.google.com/recaptcha/api.js?render=6LfFSuQUAAAAACf7MxQW0D4Bs3r3R8hKdGOkLLBp"></script>
+<script>
+grecaptcha.ready(function() {
+grecaptcha.execute('6LfFSuQUAAAAACf7MxQW0D4Bs3r3R8hKdGOkLLBp', {action: 'check'})
+    .then(function(token) {
+            // add token value to form
+            document.getElementById('g-recaptcha-response').value = token;
+        });
+    });
+</script>
 </head>
 <body>
 <script src="https://locademiadigital.com/js/js.js"></script>
@@ -46,7 +56,10 @@
     <div class="card-body row">
         <!-- FORMULARIO -->
     <div class="col-md-12">
-    <form action="#" method="POST" id="form">        
+    <form action="#" method="POST" id="form">
+    <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
+    <input type="hidden" name="action" value="check">
+    
         <div class="form-row">
             <div class="form-group col-md-12 mb-6">
             <label for="nombre">Tu nombre:</label>

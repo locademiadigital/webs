@@ -33,7 +33,7 @@ function validar() {
     } else { conta.classList.remove("invalid") }
     
     // finalmente habilito el botón si todo es válido
-      if (nom.checkValidity() && tit.checkValidity() && url1.checkValidity() && conta.value.length > 3 && sect.checkValidity()) { 
+      if (nom.checkValidity() && tit.checkValidity() && conta.value.length > 3 && sect.checkValidity()) { 
       v.classList.remove('disabled');
       } else { v.classList.add('disabled') }
       //

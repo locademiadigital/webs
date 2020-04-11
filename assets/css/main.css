@@ -124,11 +124,14 @@ pre {
  * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
  */
 a {
+  color: #38823b;
+  text-decoration: none;
   background-color: transparent;
   /* 1 */
   -webkit-text-decoration-skip: objects;
   /* 2 */
 }
+
 
 /**
  * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
@@ -1301,13 +1304,17 @@ footer .copyright {
 
 .post .post-content .post-title a {
   font-family: 'PT Serif', serif;
-  text-decoration: none;
-  color: #263959;
+  text-decoration: underline;
+  color: #3a963d;
 }
 
 .post .post-content p {
   margin-top: 0;
 }
+
+.post-content a:hover {text-decoration: underline;
+  cursor: pointer;
+  background: #fff490;}
 
 a.older-posts, a.newer-posts {
   font-size: 18px;

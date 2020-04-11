@@ -23,6 +23,6 @@ Este artículo, sin ir muy lejos busca generar empatía con posibles personas qu
 ## Borrador
 
 No he encontrado mejor herramienta digital que Trello para plasmar el desarrollo de una idea.
-Lo he explicado en mi artículo: "[Optimizar las ideas con Trello](/2020-04-11-optimizar-ideas-trello.md)", y si aún no lo tienes en cuenta, deberías hacerlo.
+Lo he explicado en mi artículo: "[Optimizar las ideas con Trello](/optimizar-ideas-trello)", y si aún no lo tienes en cuenta, deberías hacerlo.
 
 Pasar de una tarjeta de "brainstorming" a "depuración", o bien "planificado", es lo que hará que la idea empiece a tomar forma.

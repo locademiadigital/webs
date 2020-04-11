@@ -124,8 +124,6 @@ pre {
  * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
  */
 a {
-  color: #38823b;
-  text-decoration: none;
   background-color: transparent;
   /* 1 */
   -webkit-text-decoration-skip: objects;
@@ -1311,6 +1309,12 @@ footer .copyright {
 
 .post .post-content p {
   margin-top: 0;
+}
+
+.post-content > p > a {
+  text-decoration: none;
+  color: #3a963d;
+  font-weight: bold;
 }
 
 .post-content a:hover {text-decoration: underline;

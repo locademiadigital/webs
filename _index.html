@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nueva solicitud web</title>
+    <link rel="icon" type="image/png" href="https://sidval.github.io/www/testing/forms/tb/favicon.ico">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        body > .container {
+        padding: 50px 15px 0;
+        }
+        .invalid {	
+        border: 1px dotted red;
+        border-bottom-style: double;
+        border-bottom-width: 2px;
+        }
+        tr:hover, tr.selected {
+        background-color: #87e454bf
+        }
+    </style>
+<script src="https://www.google.com/recaptcha/api.js?render=6LfFSuQUAAAAACf7MxQW0D4Bs3r3R8hKdGOkLLBp"></script>
+<script>
+grecaptcha.ready(function() {
+grecaptcha.execute('6LfFSuQUAAAAACf7MxQW0D4Bs3r3R8hKdGOkLLBp', {action: 'check'})
+    .then(function(token) {
+            // add token value to form
+            document.getElementById('g-recaptcha-response').value = token;
+        });
+    });
+</script>
+</head>
+<body>
+<script src="https://locademiadigital.com/js/js.js"></script>
+    <header class="mb-4">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark mb-4">
+            <a href="https://www.facebook.com/locademiadigital" href="_new" title="LocademiaDigital" class="navbar-brand">¡Locademia Digital!</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a href="https://www.facebook.com/notes/locademia-digital/webs-para-todos-/120083879604630/" target="_new" class="nav-link">¿Qué es esto?</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+<main role="main" class="bd-content container">
+    <!--hero ini-->
+    <h1 class="h2">¡Quiero mi Web de ... !</h1>
+    <!--hero fin-->
+    <!-- form -->
+    <div class="card">
+    <div class="card-body row">
+        <!-- FORMULARIO -->
+    <div class="col-md-12">
+    <form action="#" method="POST" id="form">
+    <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
+    <input type="hidden" name="action" value="check">
+    
+        <div class="form-row">
+            <div class="form-group col-md-12 mb-6">
+            <label for="nombre">Tu nombre:</label>
+            <input type="text" name="nombre" placeholder="¿Cómo debo llamarte?" class="form-control" id="nombre" required>
+            </div>
+        </div>
+        
+        <div class="form-row">
+            <div class="form-group col-md-12 mb-6">
+                <label for="section">Tema Principal:</label>
+                <select name="section" class="form-control" id="section" required>
+                <option value="" selected></option>                    
+                <option value="Web-Empresa">Web de Mi Empresa</option>
+                <option value="Web-Servicio">Web de Mis Servicios</option>
+                <option value="Formulario-Whatsapp">Contacto por Whatsapp</option>
+                <option value="Redes-Sociales">Redes Sociales</option>
+                <option value="Blog-Viajes">Blog sobre Viajes</option>
+                <option value="Blog-Empresarial">Blog Empresarial</option>
+                <option value="Otro">Otra idea digital</option>
+                </select>
+            </div>        
+        </div>
+        
+        
+        <div class="form-row">
+            <div class="form-group col-md-12 mb-6">
+            <label for="tituloDesc">Piensa un título para tu web, si tuvieses que describirlo en máximo tres palabras, ¿cuáles serían?</label>
+            <!-- <label for="tituloPost">Título:</label> -->
+            <input type="text" name="tituloPost" placeholder="Máx. 3 palabras" class="form-control" id="titulo" required>
+            </div>
+        </div>
+        
+        <div class="form-row">
+            <div class="form-group col-md-12 mb-6">
+                <label for="contador">Descripción de tu idea - Máx 200 carácteres:</label>
+                <textarea class="form-control" id="contador" name="contador" rows="3" required maxlength="200" onpaste="contarcaracteres();" onkeyup="contarcaracteres();"></textarea>
+                <div id="res" class="font-weight-light text-monospace text-secondary">0 carácter/es</div>
+            </div>
+        </div>                
+        <div class="form-row">
+            <div class="form-group col-md-12 mb-6">
+                <label for="urlPost">Opcional - Web similar:</label>
+                <input type="url" name="urlPost" placeholder="https://google.com" pattern="https://.*" size="30" class="form-control" value="https://" id="url">
+            </div>
+        </div>
+
+            <a class="btn btn-primary col-md-6 mb-3 active disabled" id="post" onclick="ok()">Enviar</a>
+            <div class="alert alert-light float-right" role="alert"><a class="alert-link" onclick="reset()">Reset</a></div>
+        </form>
+        </div>
+    </div>
+</div>
+
+    <!-- form fin-->    
+</main>
+
+    
+    <!--footer-->
+    <footer class="container">
+    <p class="float-right"><a href="#">Ir arriba</a></p>
+    <p>© 2020 <a href="https://www.facebook.com/locademiadigital">LocademiaDigital!</a> · <span data-toggle="modal" data-target="#ayuda">¿Necesitas ayuda?</span> · <span data-toggle="modal" data-target="#exampleModalLong">Términos y Condiciones</span></p>
+</footer>
+
+<!-- Modal #ayuda -->
+<div class="modal fade" id="ayuda" tabindex="-1" role="dialog" aria-labelledby="ayuda" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ayuda">Estoy para ayudarte</h5>
+      </div>
+      <div class="modal-body">
+        <p>El formulario es bastante intuitivo; sirve para solicitar servicios web.</p>
+          <p>Si necesitas ayuda realmente, <a href="https://www.facebook.com/locademiadigital" target="_new">contame tus ideas y/o problemas aquí</a>.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Entendí todo, gracias!</button>
+      </div>
+    </div>
+  </div>
+</div>
+    
+<!-- Modal TOS -->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Políticas de privacidad; términos y condiciones</h5>
+      </div>
+      <div class="modal-body">
+        <p>Para enviar el formulario es necesario contar con Whatsapp. Sin Whatsapp no podrá enviar el mensaje</p>
+      </div>
+      <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" onclick="location.href='https://www.facebook.com/locademiadigital'">No acepto</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Acepto</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Btstrap js -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+<script type='text/javascript'>
+        document.getElementById("nombre").onchange = function() {validar()};
+        document.getElementById("titulo").onchange = function() {validar()};
+        document.getElementById("url").onchange = function() {validar()};
+        document.getElementById("contador").onchange = function() {validar()};
+        document.getElementById("section").onchange = function() {validar()};
+
+function contarcaracteres(){
+//Numero de caracteres permitidos
+    var total=200;
+
+     setTimeout(function(){
+     var valor=document.getElementById('contador');
+     var respuesta=document.getElementById('res');
+     var cantidad=valor.value.length;
+     document.getElementById('res').innerHTML = cantidad + ' caracteres, te quedan ' + (total - cantidad) ;
+     if(cantidad>total){
+         respuesta.style.color = "red";
+     }
+     else {
+         respuesta.style.color = "gray";
+     }
+     },10);
+
+ }
+
+function reset() {
+    document.getElementById("form").reset();
+    document.getElementById("toPost").value = "";
+    contarcaracteres()
+}
+
+    
+</script>
+<!-- fin scripts propios -->    
+</body>
+</html>

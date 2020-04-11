@@ -1304,8 +1304,9 @@ footer .copyright {
 
 .post .post-content .post-title a {
   font-family: 'PT Serif', serif;
-  text-decoration: underline;
+  text-decoration: none;
   color: #3a963d;
+  font-weight: bold;
 }
 
 .post .post-content p {

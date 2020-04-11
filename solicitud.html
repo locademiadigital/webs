@@ -1,0 +1,98 @@
+---
+layout: main
+title: Tags
+permalink: /solicitud
+---
+
+<div class="col-md-12">
+    <form action="#" method="POST" id="form">
+    <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
+    <input type="hidden" name="action" value="check">
+    
+        <div class="form-row">
+            <div class="form-group col-md-12 mb-6">
+            <label for="nombre">Tu nombre:</label>
+            <input type="text" name="nombre" placeholder="¿Cómo debo llamarte?" class="form-control" id="nombre" required>
+            </div>
+        </div>
+        
+        <div class="form-row">
+            <div class="form-group col-md-12 mb-6">
+                <label for="section">Tema Principal:</label>
+                <select name="section" class="form-control" id="section" required>
+                <option value="" selected></option>                    
+                <option value="Web-Empresa">Web de Mi Empresa</option>
+                <option value="Web-Servicio">Web de Mis Servicios</option>
+                <option value="Formulario-Whatsapp">Contacto por Whatsapp</option>
+                <option value="Redes-Sociales">Redes Sociales</option>
+                <option value="Blog-Viajes">Blog sobre Viajes</option>
+                <option value="Blog-Empresarial">Blog Empresarial</option>
+                <option value="Otro">Otra idea digital</option>
+                </select>
+            </div>        
+        </div>
+        
+        
+        <div class="form-row">
+            <div class="form-group col-md-12 mb-6">
+            <label for="tituloDesc">Piensa un título para tu web, si tuvieses que describirlo en máximo tres palabras, ¿cuáles serían?</label>
+            <!-- <label for="tituloPost">Título:</label> -->
+            <input type="text" name="tituloPost" placeholder="Máx. 3 palabras" class="form-control" id="titulo" required>
+            </div>
+        </div>
+        
+        <div class="form-row">
+            <div class="form-group col-md-12 mb-6">
+                <label for="contador">Descripción de tu idea - Máx 200 carácteres:</label>
+                <textarea class="form-control" id="contador" name="contador" rows="3" required maxlength="200" onpaste="contarcaracteres();" onkeyup="contarcaracteres();"></textarea>
+                <div id="res" class="font-weight-light text-monospace text-secondary">0 carácter/es</div>
+            </div>
+        </div>                
+        <div class="form-row">
+            <div class="form-group col-md-12 mb-6">
+                <label for="urlPost">Opcional - Web similar:</label>
+                <input type="url" name="urlPost" placeholder="https://google.com" pattern="https://.*" size="30" class="form-control" value="https://" id="url">
+            </div>
+        </div>
+
+            <a class="btn btn-primary col-md-6 mb-3 active disabled" id="post" onclick="ok()">Enviar</a>
+            <div class="alert alert-light float-right" role="alert"><a class="alert-link" onclick="reset()">Reset</a></div>
+        </form>
+        </div>
+    </div>
+</div>
+
+<script type='text/javascript'>
+    document.getElementById("nombre").onchange = function() {validar()};
+    document.getElementById("titulo").onchange = function() {validar()};
+    document.getElementById("url").onchange = function() {validar()};
+    document.getElementById("contador").onchange = function() {validar()};
+    document.getElementById("section").onchange = function() {validar()};
+
+function contarcaracteres(){
+//Numero de caracteres permitidos
+var total=200;
+
+ setTimeout(function(){
+ var valor=document.getElementById('contador');
+ var respuesta=document.getElementById('res');
+ var cantidad=valor.value.length;
+ document.getElementById('res').innerHTML = cantidad + ' caracteres, te quedan ' + (total - cantidad) ;
+ if(cantidad>total){
+     respuesta.style.color = "red";
+ }
+ else {
+     respuesta.style.color = "gray";
+ }
+ },10);
+
+}
+
+function reset() {
+document.getElementById("form").reset();
+document.getElementById("toPost").value = "";
+contarcaracteres()
+}
+
+
+</script>

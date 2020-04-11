@@ -1,0 +1,35 @@
+title: Locademia Digital
+description: > # this means to ignore newlines until "baseurl:"
+  Locos digitales; estamos aquí para llevar todas tus ideas y negocios al ámbito digital.
+permalink: ':title/'
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+site-twitter: waldd0 #if your site has a twitter account, enter it here
+
+# Author Settings
+author: locademiaDigital # add your name
+author-img: david-freeman.jpg # add your photo
+about-author: Expertos en todo lo que tenga que ver con el mundo digital # add description
+social-twitter: waldd0 # add your Twitter handle
+social-facebook: locademiadigital # add your Facebook handle
+social-github: locademiadigial # add your Github handle
+social-linkedin: # add your Linkedin handle
+social-email: hola@locademiadigital.com # add your Email address
+
+# Disqus
+discus-identifier: locademiadigital # add your discus identifier
+
+# Tracker
+#analytics: # Google Analytics
+
+# Build Settings
+markdown: kramdown
+plugins:
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jemoji
+
+paginate: 8
+paginate_path: "/page/:num"
+
+exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock"]

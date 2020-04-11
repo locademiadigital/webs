@@ -13,14 +13,14 @@ about-author: Expertos en todo lo que tenga que ver con el mundo digital # add d
 social-twitter: waldd0 # add your Twitter handle
 social-facebook: locademiadigital # add your Facebook handle
 social-github: locademiadigial # add your Github handle
-social-linkedin: # add your Linkedin handle
+social-linkedin: olrenovell # add your Linkedin handle
 social-email: hola@locademiadigital.com # add your Email address
 
 # Disqus
 discus-identifier: locademiadigital # add your discus identifier
 
 # Tracker
-#analytics: # Google Analytics
+analytics: UA-102273252-2 # Google Analytics
 
 # Build Settings
 markdown: kramdown

@@ -1317,6 +1317,13 @@ footer .copyright {
   font-weight: bold;
 }
 
+.post-content > p blockquote > a {
+  text-decoration: underline;
+  color: #3a963d;
+  margin-left: 5px;
+  font-weight: bold;
+}
+
 .post-content > p > a:hover {text-decoration: underline;
   cursor: pointer;
   background: #fff490;}

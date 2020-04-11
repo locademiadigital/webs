@@ -15,5 +15,8 @@
   
   {% include analytics.html %}
   {% include javascripts.html %}
+  {% if page.solicitud %}
+  {% include ws-js.html %}
+  {% endif %}
 </body>
 </html>

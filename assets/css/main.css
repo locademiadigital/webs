@@ -48,6 +48,38 @@ body > .container {
   border-bottom-width: 2px;
   }
 
+  .custom-control {
+    position: relative;
+    display: block;
+    min-height: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+.custom-control-label::after {
+  position: absolute;
+  top: .25rem;
+  left: -1.5rem;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  content: "";
+  background: no-repeat 50%/50% 50%;
+}
+
+.disabled, fieldset:disabled a.btn {
+  pointer-events: none;
+}
+
+.btn-primary.disabled, .btn-primary:disabled {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn.disabled, .btn:disabled {
+  opacity: .65;
+}
+
 /* Sections
    ========================================================================== */
 /**

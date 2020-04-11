@@ -1317,7 +1317,7 @@ footer .copyright {
   font-weight: bold;
 }
 
-.post-content a:hover {text-decoration: underline;
+.post-content > a:hover {text-decoration: underline;
   cursor: pointer;
   background: #fff490;}
 

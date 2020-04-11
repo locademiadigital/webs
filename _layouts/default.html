@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 {% include head.html %}
+  <!--Captcha-->
+  {% if page.solicitud %}
+  {% include {{ captcha.html }} %}
+  {% endif %}
+
+</head>
 <body>
 
   <div class="wrapper">

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Cómo empezar una página web
-date: 2020-04-07 00:00:00 +0300
+date: 2020-04-11 00:00:00 +0300
 description: Cómo empezar una página web, ¿por dónde empiezo? # Add post description (optional)
 img: how-to-start.jpg # Add image post (optional)
 tags: [webs] # add tag

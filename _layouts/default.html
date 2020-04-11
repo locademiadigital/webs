@@ -2,12 +2,17 @@
 <html lang="es">
 {% include head.html %}
   <!--Captcha-->
-  {% include {{ captcha.html }} %}
+  {% if page.solicitud %}
+  {% include captcha.html %}
+  {% endif %}
+
 </head>
 <body>
+
   <div class="wrapper">
     {{ content }}
   </div>
+  
   {% include analytics.html %}
   {% include javascripts.html %}
 </body>

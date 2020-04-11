@@ -15,6 +15,33 @@ html {
   /* 2 */
 }
 
+body > .container {
+  padding: 50px 15px 0;
+}
+@media (min-width: 768px)
+.container, .container-md, .container-sm {
+  max-width: 720px;
+}
+@media (min-width: 576px)
+.container, .container-sm {
+  max-width: 540px;
+}
+@media (min-width: 768px)
+.container {
+  max-width: 720px;
+}
+@media (min-width: 576px)
+.container {
+  max-width: 540px;
+}
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 /* Sections
    ========================================================================== */
 /**
@@ -302,8 +329,8 @@ textarea {
 
 .btn-primary {
   color: #fff;
-  background-color: #007bff;
-  border-color: #007bff;
+  background-color: #8BC34A;
+  border-color: #f44336a6;
 }
 
 @media (prefers-reduced-motion: reduce)
@@ -877,6 +904,24 @@ body {
 
 h1 {
   font-weight: 400;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  margin-bottom: .5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.h1 {
+  font-size: 2.5rem;
+}
+
+.h2 {
+  font-size: 2rem;
+}
+
+.h3 {
+  font-size: 1.75rem;
 }
 
 img {

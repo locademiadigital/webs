@@ -7,14 +7,14 @@ permalink: /solicitud
 <main class="container">
 
     <h2>Solicita tu página web</h2>
-    <p>Completa el siguiente formulario</p>
+    
     <br /><br />
 
 <div class="post-content">
     <form action="#" method="POST" id="form">
     <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
     <input type="hidden" name="action" value="check">
-    
+    <fieldset><legend><p>Completa el siguiente formulario</p></legend>
         <div class="form-row">
             <div class="form-group col-md-12 mb-6">
             <label for="nombre">Tu nombre:</label>
@@ -41,7 +41,7 @@ permalink: /solicitud
         
         <div class="form-row">
             <div class="form-group col-md-12 mb-6">
-            <label for="tituloDesc">Piensa un título para tu web, si tuvieses que describirlo en máximo tres palabras, ¿cuáles serían?</label>
+            <label for="tituloDesc">Piensa un título para tu web, si tuvieses que describirlo en máximo tres palabras, ¿cuáles serían?</label><br />
             <!-- <label for="tituloPost">Título:</label> -->
             <input type="text" name="tituloPost" placeholder="Máx. 3 palabras" class="form-control" id="titulo" required>
             </div>
@@ -63,6 +63,7 @@ permalink: /solicitud
 
             <a class="btn btn-primary col-md-6 mb-3 active disabled" id="post" onclick="ok()">Enviar</a>
             <div class="alert alert-light float-right" role="alert"><a class="alert-link" onclick="reset()">Reset</a></div>
+        </fieldset>
         </form>
         </div>
     </div>

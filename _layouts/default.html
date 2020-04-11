@@ -2,18 +2,13 @@
 <html lang="es">
 {% include head.html %}
   <!--Captcha-->
-  {% if layout.solicitud %}
   {% include {{ captcha.html }} %}
-  {% endif %}
-
 </head>
 <body>
-
   <div class="wrapper">
     {{ content }}
   </div>
-  
-  <!-- {% include analytics.html %} -->
+  {% include analytics.html %}
   {% include javascripts.html %}
 </body>
 </html>

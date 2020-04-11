@@ -38,4 +38,4 @@ Si algo no se entiende en esta respuesta, por favor comenta tus consultas y resp
 
 ¡Buena suerte!
 
->Este artículo pueden encontrarlo en [QUORA](https://es.quora.com/Qu%C3%A9-opinas-de-Trello/answer/Osvaldo-Lopez-11), ya que ahí también publico mis contenidos. No es copia, soy el autor original del mismo.
+>Este artículo pueden encontrarlo en [QUORA](https://es.quora.com/Qu%C3%A9-opinas-de-Trello/answer/Osvaldo-Lopez-11){:target="_blank"}, ya que ahí también publico mis contenidos. No es copia, soy el autor original del mismo.

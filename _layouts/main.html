@@ -10,8 +10,11 @@ layout: default
       </div>
       <div class="author-name">{{site.author}}</div>
       <p>{{site.about-author}}</p>
+      {% if page.solicitud %}
+      {% else %}
       <br />
       <p><a href="/solicitud.html" title="Solicitar Web" class="btn-wsap">Solicita tu WEB</a></p>
+      {% endif %}
     </div>
   </header> <!-- End Header -->
   <footer>

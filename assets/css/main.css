@@ -43,9 +43,9 @@ body > .container {
 }
 
 .invalid {	
-  border: 1px dotted red;
-  border-bottom-style: double;
-  border-bottom-width: 2px;
+  border: 1px dotted red !important;
+  border-bottom-style: double !important;
+  border-bottom-width: 2px !important;
   }
 
   .custom-control {
@@ -325,6 +325,8 @@ textarea {
 
 textarea {
   overflow: auto;
+  width: 100% !important;
+  height: auto !important;
   resize: vertical;
 }
 

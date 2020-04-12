@@ -368,6 +368,60 @@ textarea {
   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
+.btn-wsap {
+  display: inline-block;
+  font-weight: 400;
+  color: #212529;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  text-decoration: none;
+  border: 1px dotted #6f7d20;
+  border-radius: 8px;
+}
+
+.btn-wsap:hover,
+.btn-wsap:focus {
+    border: 1px dotted #9fb32e;
+    background: #dcf740;
+    background: -webkit-gradient(linear, left top, left bottom, from(#dcf740), to(#859626));
+    background: -moz-linear-gradient(top, #dcf740, #859626);
+    background: linear-gradient(to bottom, #dcf740, #859626);
+    color: #d3f0dc;
+    text-decoration: none;
+}
+.btn-wsap:active {
+    background: #6f7d20;
+    background: -webkit-gradient(linear, left top, left bottom, from(#6f7d20), to(#6f7d20));
+    background: -moz-linear-gradient(top, #6f7d20, #6f7d20);
+    background: linear-gradient(to bottom, #6f7d20, #6f7d20);
+}
+.btn-wsap:before{
+    content:  "\0000a0";
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    line-height: 24px;
+    margin: 0 4px -6px -4px;
+    position: relative;
+    top: 0px;
+    left: -5px;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAA7EAAAOxAGVKw4bAAACXklEQVRIiaXVTYiOURQH8N88prdJs5qkSZI0TWh6SZSGJiYyzU5ZMBuW0qxkIZZsZCEryULS5GOSpEloiGzEkHxlQ0lYWUoSFuc+M3ee5n29OHV7znPvuefc87/nf24bCo1lAXZgG5ahluZ/4jMe4BJeNfExHaDIRhdO4BkOoY6ObL0dS7EHk5hAX8XPtO9qBv14jn3JafUgc+mb8BSjVedV46FkuLxRuk2kE+M4Vj10mVJdQLLYbLj+ZtRSkNFsTiGgeIS1c6Q/mDJqBlGudwoU+vLJURyvpNyO07iGlxhoMQBxJxPlfy1F7K6kO4KxFKhHwFfXOlyTqM/DugTBOVHfbel7FEfwCV9E6XbjYWbzq4leYGNZYrfTguz7FfOTXscuXNS63CkDrMCLOVK8gt1JP4wzKZMqMRvpH1PGrptd96VhDVMC/yWCfGsqNn/S3xBV0ohYQ7iZjPvMVFOBRdgv4GskbwrRtBaZuxJu4a3oR6+wXVz8eBb4fBY0Hx34TvScA03S7EjODplpdINYmWx6UmZVMtYF/Hpxt7JYlQ5BuhvJYS4FrqaguRwUBFbgnsD4T+QZFhd/CuvTnrEUvApPSd7pjVezE2mi18QjdCFBMCJgy2324mS+sYZ3Zoj1P9IrSrorDzAkWsW/tulyLBbQ9GdzClF2A1nAnJVa1NeIhjhctelOUWui1I6kFK+Z6Z7NZKF4xaawurrYjp34IUr1m7i8zeLxKS9qAk/wIf13iQraKjA/iw2CWLMO1CaY+ByX8T7Nlx21EHW/BasE44mm9xr38Tg5Lu3zvT9/Axk4d0NcsK/KAAAAAElFTkSuQmCC") no-repeat left center transparent;
+    background-size: 100% 100%;
+}
+
+
+
 .btn-primary {
   color: #fff;
   background-color: #8BC34A;
@@ -375,7 +429,7 @@ textarea {
 }
 
 @media (prefers-reduced-motion: reduce)
-.btn {
+.btn .btn-wsap {
     transition: none;
 }
 @media (min-width: 768px) 
